@@ -122,13 +122,20 @@ button:hover {
     text-align: center;
 }
 
+.section-1 h2{
+    color: white;
+    margin-top: 10px;
+    font-size: 36px;
+    background: transparent;
+}
+
 .section-1 p{
-    margin-top: 20px;
+    margin-top: 10px;
     color: rgba(196, 196, 196, 0.89);
     justify-content: center;
     align-items: center;
     background: transparent;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .section-1{
@@ -731,4 +738,110 @@ button:hover {
     color: #ccc;
     font-size: 14px;
     margin-top: 20px;
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        margin: 0 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 28px;
+        margin: 10px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 60vh;
+    }
+
+    .section-1 h1 {
+        font-size: 32px;
+        max-width: 90%;
+    }
+
+    .section-1 p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+
+    /* Section 2 */
+    .section-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 90%;
+        margin: 5rem auto;
+    }
+
+    .section-2 .section-2-card {
+        width: 100%;
+    }
+
+    /* Section 3 */
+    .section-3-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 20px;
+    }
+
+    .section-3-card,
+    .section-3-prime-tier-card {
+        min-height: auto;
+    }
+
+    .most-popular {
+        padding: 5px 50px;
+    }
+
+    /* Section 4 */
+    .section-4-div {
+        padding: 30px;
+    }
+
+    .section-4-div h1 {
+        font-size: 28px;
+        margin-top: 80px;
+    }
+
+    .section-4-div p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+
+    .section-4-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-4-card {
+        width: 80%;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+        max-width: 90%;
+        padding: 10px;
+    }
 }
