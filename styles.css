@@ -2,9 +2,12 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    background-color: #1a1a1a;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+
+body{
+    background-color: #1a1a1a;
 }
 
 /* Header */
@@ -18,9 +21,6 @@ header{
     font-size: 36px;
     margin: 20px;
     font-weight: bold;
-}
-
-.logo{
     color: #7a5cff;
     background: linear-gradient(to right, #7a5cff, #ff5673);
     -webkit-text-fill-color: transparent;
@@ -74,7 +74,7 @@ button {
 
 button:hover {
     /* Slightly darken on hover */
-    background: linear-gradient(to right, #7a5cff, ##ff5673);
+    background: linear-gradient(to right, #7a5cff, #ff5673);
         transform: scale(1.1); /* Increase size on hover */
         transition: transform 0.3s ease-in-out;
 }
@@ -405,10 +405,14 @@ button:hover {
 
 .section-4-card-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
     position: relative;
     flex-grow: 5;
+    gap: 20px;
 }
+
 .section-4-card{
     width: 25%;
     margin: 15px auto;
@@ -416,40 +420,90 @@ button:hover {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px white;
+    background: rgb(43, 42, 42);
+    text-align: center;
 }
 
-.section-4-card img{
-        width: 100%;
-        height: 500px;
-        border-radius: 12px;
-        transition: transform 0.4s ease-in-out;
+.image-container{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
 
-.section-4-card:hover img {
+.image-container img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 12px 12px 0 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+.section-4-card:hover .image-container img{
     transform: scale(1.1);
+    object-position: top;
 }
+
+.badge{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(to right, #7a5cff, #911c8b);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.content{
+    padding: 20px;
+}
+
+h2{
+    margin: 10px 0;
+    font-size: 26px;
+    color: white;
+}
+   
+p{
+    color: white;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.content .price {
+    color: #7e22ce;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.subscribe-btn{
+    background: linear-gradient(to right, #7e22ce, #ff5673);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
 
 .section-4 .section-4-card-container .section-4-card .icon-container{
     position: absolute;
     bottom: 15px;
     display: flex;
-    background-color: white;
+    background: #444;
+    color: white;
     align-items: center;
     width: 25%;
     border-bottom-right-radius: 12px;
     border-bottom-left-radius: 12px;
     font-size: 24px;
-    padding: 24px;
+    padding: 28px;
     gap: 10px;
-}
-
-.section-4 .section-4-card-container .section-4-card .icon-container span {
-    background-color: transparent;
-    color: black; 
-}
-
-.section-4-card i{
-    background-color: transparent;
 }
 
 .section-4 button{
@@ -536,6 +590,7 @@ button:hover {
 }
 
 .faq-footer p{
+    font-size: 18px;
     margin: 10px;
 }
 
@@ -546,6 +601,7 @@ button:hover {
 .faq-footer button{
     margin-top: 5px;
     margin-bottom: 150px;
+    font-size: 22px;
 }
 
 /* Section 6 */
@@ -738,6 +794,94 @@ button:hover {
     color: #ccc;
     font-size: 14px;
     margin-top: 20px;
+}
+
+/* Tablet & Small Laptop Screens (min-width: 769px and max-width: 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header {
+        margin: 0 30px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .nav-items {
+        gap: 18px;
+    }
+
+    .buttons {
+        gap: 12px;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 65vh;
+    }
+
+    .section-1 h1 {
+        font-size: 38px;
+        max-width: 85%;
+    }
+
+    .section-1 p {
+        font-size: 19px;
+        padding: 0 15px;
+    }
+
+    /* Section 2 */
+    .section-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 85%;
+    }
+
+    .section-2 .section-2-card {
+        width: 100%;
+    }
+
+    /* Section 3 */
+    .section-3-container {
+        margin: 50px 30px;
+    }
+
+    .section-3-card,
+    .section-3-prime-tier-card {
+        min-height: auto;
+    }
+
+    .most-popular {
+        padding: 8px 50px;
+    }
+
+    /* Section 4 */
+    .section-4-div {
+        padding: 35px;
+    }
+
+    .section-4-div h1 {
+        font-size: 30px;
+        margin-top: 90px;
+    }
+
+    .section-4-div p {
+        font-size: 19px;
+        max-width: 85%;
+    }
+
+    .section-4-card-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section-4-card {
+        width: 48%;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+        max-width: 85%;
+    }
 }
 
 /* Mobile Screens (max-width: 768px) */
